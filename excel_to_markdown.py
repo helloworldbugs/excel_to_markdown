@@ -1,11 +1,21 @@
 import pandas as pd
 from openpyxl import load_workbook
 import os
+import tkinter as tk
+from tkinter import filedialog
 
 pwd = os.getcwd()
-inputexcelfile = input('输入excel文件路径：')
+
+root = tk.Tk()
+root.withdraw()
+
+# 获取选择好的文件
+filepath = filedialog.askopenfilename(title="请选择Excel文件", filetypes=[("Excel files", "*.xlsx;*.xls")])
+
+
 
 def excel_to_markdown_html(input_file, output_file):
+
     # 使用openpyxl加载工作簿
     wb = load_workbook(input_file)
     
@@ -43,6 +53,6 @@ def excel_to_markdown_html(input_file, output_file):
             f.write('</table>\n\n')
 
 if __name__ == "__main__":
-    input_file = inputexcelfile  # 修改为你的文件名
-    output_file = pwd + '\\output.md'      # 修改为你想要的输出文件名
-    excel_to_markdown_html(input_file, output_file)
+    outputpath = pwd + '\\output.md'      # 修改为你想要的输出文件名
+    excel_to_markdown_html(input_file = filepath, output_file = outputpath)
+    print('文件已生成，路径：',outputpath)

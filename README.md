@@ -10,9 +10,6 @@
 
 1. 先安装py库
 
-        pip install pandas
+`pip install -r requirements.txt`
 
-        pip install openpyxl
-
-
-2. 直接双击py脚本文件，然后会弹出一个cmd窗口，直接把excel表格文件拖进cmd窗口，然后回车即可。完成后会在脚本同级目录下生成一个名为`output.md`的文件
+1. 直接双击py脚本文件，弹框选择excel文件开始转换。完成后会在脚本同级目录下生成一个名为`output.md`的文件
