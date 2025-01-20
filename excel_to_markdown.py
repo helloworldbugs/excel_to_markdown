@@ -53,6 +53,7 @@ def excel_to_markdown_html(input_file, output_file):
             f.write('</table>\n\n')
 
 if __name__ == "__main__":
-    outputpath = pwd + '\\output.md'      # 修改为你想要的输出文件名
+    outputpath = filepath + '.md'      # 输出文件
     excel_to_markdown_html(input_file = filepath, output_file = outputpath)
     print('文件已生成，路径：',outputpath)
+    input("按任意键退出...")

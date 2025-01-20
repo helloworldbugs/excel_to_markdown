@@ -12,4 +12,4 @@
 
     `pip install -r requirements.txt`
 
-1. 直接双击py脚本文件，弹框选择excel文件开始转换。完成后会在脚本同级目录下生成一个名为`output.md`的文件
+2. 直接双击py脚本文件，弹框选择excel文件开始转换。转换完成后会在excel文件的同级目录下生成一个同名的`.md`后缀的markdown文件。
